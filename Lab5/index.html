@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+
+<body>
+  
+    <h3>Get</h3>
+    <!-- This is a heading for the "Get" form -->
+    <form action="/name">
+        <!-- This is a form with an action attribute, which specifies where the form data will be sent when submitted -->
+        Firstname:
+        <input type="text" name="first">
+        <!-- This is a text input field for the first name -->
+
+        <br>
+        <br>
+
+        Lastname:
+        <input type="text" name="last">
+        <!-- This is a text input field for the last name -->
+
+        <br>
+        <br>
+
+        <input type="submit" />
+        <!-- This is a submit button for the form -->
+    </form>
+
+    <hr>
+    <!-- This is a horizontal rule (line) -->
+
+    <h3>Post</h3>
+    <!-- This is a heading for the "Post" form -->
+
+    <form action="/name" method="post">
+        <!-- This is another form with an action attribute and a "post" method, indicating data will be sent to the server as part of the request body -->
+        Firstname:
+        <input type="text" name="first">
+        <!-- Input first name -->
+
+        <br>
+        <br>
+
+        Lastname:
+        <input type="text" name="last">
+        <!-- Input last name -->
+
+        <br>
+        <br>
+
+        <input type="submit" />
+        <!-- Submit button -->
+    </form>
+    
+</body>
+
+</html>
