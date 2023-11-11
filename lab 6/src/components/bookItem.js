@@ -1,26 +1,20 @@
-import Card from 'react-bootstrap/Card';
+import { Component } from 'react';
+import { Card } from 'react-bootstrap';
 
-function BookItem(props) {
-
-    return (
-        <div>
-            <Card>
-                <Card.Header>{props.myBook.title}</Card.Header>
-                <Card.Body>
-                    <blockquote className="blockquote mb-0">
-                        <img src={props.myBook.thumbnailUrl}></img>
-                        <footer>
-                            {props.myBook.authors[0]}
-                        </footer>
-                    </blockquote>
-                </Card.Body>
-            </Card>
-            {/* <h3>{props.myBook.title}</h3>
-            <img src={props.myBook.thumbnailUrl}></img>
-            <p>{props.myBook.authors[0]}</p> */}
-        </div>
-    );
-
+export class BookItem extends Component
+{
+    render()
+    {
+        return (
+            <div style={{ display: "flex", justifyContent: "center", padding: "1rem 0" }}>
+                <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src={this.props.book.thumbnailUrl} />
+                    <Card.Body>
+                        <Card.Title>{this.props.book.title}</Card.Title>
+                        <Card.Text>by <b>{this.props.book.authors[0]}</b></Card.Text>
+                    </Card.Body>
+                </Card>
+            </div>
+        );
+    }
 }
-
-export default BookItem;
